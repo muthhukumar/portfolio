@@ -1,0 +1,25 @@
+/* width */
+
+:root {
+  --navy: black;
+  --dark-slate: #ebf0ed98;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--dark-slate);
+  border: 3px solid var(--navy);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--navy);
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}

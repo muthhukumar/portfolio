@@ -6,4 +6,16 @@
   .text {
     @apply text-black dark:text-white;
   }
+
+  .background {
+    @apply bg-white dark:bg-black;
+  }
+
+  .background-invert {
+    @apply bg-black dark:bg-white;
+  }
+
+  .opacity {
+    @apply opacity-70;
+  }
 }

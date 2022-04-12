@@ -1,7 +1,4 @@
-import type {
-  LinksFunction,
-  MetaFunction,
-} from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -10,12 +7,16 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import { Navbar } from "./components";
+import { Email, Navbar, Socials } from "./components";
 
 import tailwindStylesheetUrl from "./styles/tailwind.css";
+import indexStylesheetUrl from "./styles/index.css";
 
 export const links: LinksFunction = () => {
-  return [{ rel: "stylesheet", href: tailwindStylesheetUrl }];
+  return [
+    { rel: "stylesheet", href: tailwindStylesheetUrl },
+    { rel: "stylesheet", href: indexStylesheetUrl },
+  ];
 };
 
 export const meta: MetaFunction = () => ({
@@ -24,10 +25,9 @@ export const meta: MetaFunction = () => ({
   viewport: "width=device-width,initial-scale=1",
 });
 
-
 export default function App() {
   return (
-    <html lang="en" className="h-full dark">
+    <html lang="en" className="h-full dark scroll-smooth">
       <head>
         <Meta />
         <Links />
@@ -38,6 +38,8 @@ export default function App() {
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+        <Socials />
+        <Email />
       </body>
     </html>
   );
